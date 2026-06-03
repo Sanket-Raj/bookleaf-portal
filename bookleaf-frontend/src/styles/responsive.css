@@ -1,0 +1,42 @@
+/* Tablet & Small Desktop Devices */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .sidebar {
+    width: 200px;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide sidebar on mobile behind a hamburger menu */
+  .sidebar {
+    display: none; 
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
