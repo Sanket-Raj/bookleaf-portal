@@ -1,97 +1,44 @@
-﻿# bookleaf-portal
-Overview
+﻿# BookLeaf Publishing Platform
 
---BookLeaf is a comprehensive publishing solution that combines:
+A modern, full-stack publishing platform with AI-powered features for authors and publishers.
 
-    Backend API - Express + TypeScript + PostgreSQL
+## 🎯 Overview
 
-    Frontend Web - React + Vite + TypeScript
+BookLeaf is a comprehensive publishing solution that combines:
+- **Backend API** - Express + TypeScript + PostgreSQL
+- **Frontend Web** - React + Vite + TypeScript
+- **Real-time Service** - Server-Sent Events (SSE) + Redis
+- **AI Integration** - Anthropic Claude for content analysis and insights
+- **Cloud Ready** - Docker containerization with docker-compose
 
-    Real-time Service - Server-Sent Events (SSE) + Redis
+---
 
-    AI Integration - Anthropic Claude for content analysis and insights
+## 🚀 Setup & Quick Start
 
-    Cloud Ready - Docker containerization with docker-compose
+### 1. Prerequisites
 
---Quick Start
-Prerequisites
+- **Docker & Docker Compose** (recommended)
+- **Node.js 18+** (for local development)
+- **PostgreSQL 15+** (for local development)
+- **Redis 7+** (for local development)
+- **ANTHROPIC_API_KEY** (from Anthropic dashboard)
 
-    Docker & Docker Compose (recommended)
+### 2. Environment Configuration
 
-    Node.js 18+ (for local development)
+Clone the repository and set up your environment variables:
 
-    PostgreSQL 15+ (for local development)
-
-    Redis 7+ (for local development)
-
-    ANTHROPIC_API_KEY (from Anthropic dashboard)
-
-Using Docker (Recommended)
-
-    Clone the repository
-
---Bash
-
-git clone https://github.com/Sanket-Raj/bookleaf-portal.git
+```bash
+git clone [https://github.com/Sanket-Raj/bookleaf-portal.git](https://github.com/Sanket-Raj/bookleaf-portal.git)
 cd bookleaf-portal
 
-    Setup environment variables
-
---Bash
-
+# Copy the example file and edit it to include your specific keys
 cp .env.example .env
-
-Edit .env and set:
-Code snippet
-
-ANTHROPIC_API_KEY=your_key_here
-DB_PASSWORD=secure_password
-JWT_SECRET=your_jwt_secret
-NODE_ENV=production
-
-    Build and start services
-
-Bash
 
 docker-compose up --build
+cd bookleaf-backend && npm install && cd ..
+cd bookleaf-frontend && npm install && cd ..
+cd bookleaf-sse && npm install && cd ..
 
-    Access the application
-
-    Frontend: http://localhost
-
-    Backend API: http://localhost/api
-
-    SSE Service: http://localhost:5001
-
-Local Development
-Setup Backend
-Bash
-
-cd bookleaf-backend
-npm install
-cp .env.example .env
-npm run dev
-
-Setup Frontend
-Bash
-
-cd bookleaf-frontend
-npm install
-cp .env.example .env
-npm run dev
-
-Setup SSE Service
-Bash
-
-cd bookleaf-sse
-npm install
-cp .env.example .env
-npm run dev
-
---Project Structure
-
-The project follows a modular architecture separating the frontend, backend, and real-time components:
-Plaintext
 
 bookleaf-portal/
 ├── bookleaf-backend/    # Express API, Database models, and Business Logic
